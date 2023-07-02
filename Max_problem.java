@@ -15,4 +15,15 @@ public class Max_problem {
         }
         return max;
     }
+    //UC2 check same for float number
+    public static Float findMaximum(Float num1, Float num2, Float num3) {
+        Float max = num1;
+        if (num2.compareTo(max) > 0) {
+            max = num2;
+        }
+        if (num3.compareTo(max) > 0) {
+            max = num3;
+        }
+        return max;
+    }
 }
