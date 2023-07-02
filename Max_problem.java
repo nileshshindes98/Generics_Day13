@@ -18,11 +18,23 @@ public class Max_problem {
     //UC2 check same for float number
     public static Float findMaximum(Float num1, Float num2, Float num3) {
         Float max = num1;
-        if (num2.compareTo(max) > 0) {
+        if (Float.compare(num2, max) > 0) {
             max = num2;
         }
-        if (num3.compareTo(max) > 0) {
+        if (Float.compare(num3, max) > 0) {
             max = num3;
+        }
+        return max;
+    }
+    // UC3 for String
+
+    public static String findMaximum(String str1, String str2, String str3) {
+        String max = str1;
+        if (str2.compareTo(max) > 0) {
+            max = str2;
+        }
+        if (str3.compareTo(max) > 0) {
+            max = str3;
         }
         return max;
     }
