@@ -1,7 +1,21 @@
 package generics;
 
 public class Max_problem {
-    public static Integer findMaximum(Integer num1, Integer num2, Integer num3)
+
+    public static <T extends Comparable<T>> T findMaximum(T value1, T value2, T value3) {
+        T max = value1;
+        if (value2.compareTo(max) > 0) {
+            max = value2;
+        }
+        if (value3.compareTo(max) > 0) {
+            max = value3;
+        }
+        return max;
+    }
+
+
+
+   /* public static Integer findMaximum(Integer num1, Integer num2, Integer num3)
     // we use Integer object instead of int Primitive data type
     //when we use 'int' the we allow only operators to compare and in other
     // hand 'Integer' is object which allows .compareTo method
@@ -37,5 +51,5 @@ public class Max_problem {
             max = str3;
         }
         return max;
-    }
+    }*/
 }
